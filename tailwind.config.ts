@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  darkMode: ['class'],
+  darkMode: ["class"],
   content: [
-    './app/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -43,17 +43,9 @@ module.exports = {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
-        'destructive-foreground': "hsl(var(--destructive-foreground))",
-        'popover': {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        'popover-foreground': "hsl(var(--popover-foreground))",
-        'card': {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        'card-foreground': "hsl(var(--card-foreground))",
+        "destructive-foreground": "hsl(var(--destructive-foreground))",
+        "popover-foreground": "hsl(var(--popover-foreground))",
+        "card-foreground": "hsl(var(--card-foreground))",
       },
       borderRadius: {
         lg: "var(--radius)",
