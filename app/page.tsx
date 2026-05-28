@@ -1,24 +1,23 @@
-import Link from "next/link";
+import { UserButton, auth } from "@clerk/nextjs";
+import { redirect } from "next/navigation";
 
-export default function HomePage() {
+export default function Home() {
+  const { userId } = auth();
+
+  if (userId) {
+    redirect("/dashboard");
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-200 flex flex-col items-center justify-center p-4">
-      <h1 className="text-5xl font-extrabold text-gray-900 mb-6 text-center">Welcome to Our Daycare Center!</h1>
-      <p className="text-xl text-gray-700 mb-12 max-w-2xl text-center">
-        Providing a safe, nurturing, and fun environment for your children to learn and grow.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-6">
-        <Link href="/sign-in">
-          <button className="px-10 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-            Sign In
-          </button>
-        </Link>
-        <Link href="/sign-up">
-          <button className="px-10 py-4 bg-purple-600 text-white font-semibold rounded-lg shadow-lg hover:bg-purple-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-            Sign Up
-          </button>
-        </Link>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+          Daycare Site Home Page
+        </p>
+        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
+          <UserButton afterSignOutUrl="/" />
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
