@@ -1,4 +1,4 @@
-import { auth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
 export default function DashboardPage() {
@@ -14,4 +14,3 @@ export default function DashboardPage() {
       <p className="text-lg text-gray-600">You are signed in.</p>
     </div>
   );
-}
