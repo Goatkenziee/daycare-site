@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Daycare Site",
-  description: "A full-stack daycare website",
+  description: "A full-stack daycare management site",
 };
 
 export default function RootLayout({
