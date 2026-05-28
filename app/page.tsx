@@ -1,4 +1,5 @@
-import { UserButton, auth } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server"; // Corrected import path for auth
 import { redirect } from "next/navigation";
 import Link from "next/link";
 
