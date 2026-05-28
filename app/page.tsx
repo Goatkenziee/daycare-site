@@ -1,4 +1,7 @@
-import { Button } from "@/components/ui/button"
+import Image from 'next/image'; // Using next/image for optimized images
+
+// Removed import of Button as it caused module not found error and is not used in this page.
+// import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -16,13 +19,13 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             By{' '}
-            <img
+            <Image
               src="/vercel.svg"
               alt="Vercel Logo"
               className="dark:invert lg:dark:invert-0"
               width={100}
               height={24}
-              priority
+              priority // 'priority' is a valid prop for next/image
             />
           </a>
         </div>
@@ -36,8 +39,7 @@ export default function Home() {
         <a
           href="/sign-in"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer" // Removed target="_blank" to avoid opening in new tab by default for internal links
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
             Sign In {' '}
@@ -53,8 +55,7 @@ export default function Home() {
         <a
           href="/sign-up"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer" // Removed target="_blank"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
             Sign Up {' '}
@@ -70,8 +71,7 @@ export default function Home() {
         <a
           href="/dashboard"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer" // Removed target="_blank"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
             Dashboard {' '}
@@ -87,8 +87,7 @@ export default function Home() {
         <a
           href="/about"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer" // Removed target="_blank"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
             About {' '}
@@ -102,5 +101,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }

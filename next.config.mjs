@@ -1,17 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  eslint: {
-    dirs: ['app', 'components', 'src'],
+  swcMinify: true,
+  experimental: {
+    appDir: true,
   },
-  compiler: {
-    // Remove console logs in production builds
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
-  // Add experimental flag for app dir if needed, though usually not required for Next 14+ with App Router
-  // experimental: {
-  //   appDir: true,
-  // },
+  // Add any other necessary configurations here
 };
 
 export default nextConfig;
