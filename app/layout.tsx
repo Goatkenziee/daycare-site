@@ -1,1 +1,20 @@
-import type { Metadata } from \"next\"\nimport { Inter } from \"next/font/google\"\nimport \"./globals.css\"\n\nconst inter = Inter({\ subsets: [\"latin\"] })\n\nexport const metadata: Metadata = {\n  title: \"Daycare Site\",\n  description: \"Full stack daycare site\",\n}\n\nexport default function RootLayout({ children }: {\n  children: React.ReactNode\n}) {\n  return (\n    <html lang=\"en\">\n      <body className={inter.className}>{children}</body>\n    </html>\n  )\n}\n
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "Daycare Site",
+  description: "Full stack daycare site",
+}
+
+export default function RootLayout({ children }: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
+}
